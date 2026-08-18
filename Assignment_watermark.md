@@ -25,7 +25,7 @@ Today the chain batch-loads yesterday's orders every morning. Operations wants l
 │                          bridge_consumer.py                         │
 │                          long-running daemon — start once:          │
 │                          poll → batch → PUT → commit → repeat       │
-│                          (no human touches a file, ever)            │
+││
 └──────────────────────────────────┬──────────────────────────────────┘
                                    │  HTTPS (Databricks Files API)
                                    ▼
