@@ -111,23 +111,6 @@ You are assessed on **explanation as much as on code**. Working code with no ana
 - Python 3.10+
 - `pip install confluent-kafka databricks-sdk`
 
-**Databricks Free Edition:**
-- A workspace (free, no credit card). Unity Catalog is enabled by default.
-- A **personal access token**: your name (top right) → Settings → Developer → Access tokens → Generate new token. Copy it immediately; it is shown once.
-
-> ### ⚠️ Free Edition quota — plan around it
->
-> Free Edition is subject to a fair-usage quota. **If you exceed it, your compute is shut down for the rest of the day** (in extreme cases, the month). Your data and notebooks survive, but you cannot run anything until the limit resets.
->
-> Streaming queries with state are not cheap. Protect yourself:
-> - Never leave a streaming query running unattended.
-> - Use the `AvailableNow` loop pattern (Section 7.3) with a bounded iteration count — never an infinite loop.
-> - Stop all queries (`for q in spark.streams.active: q.stop()`) at the end of every session.
-> - **Do not start this assignment the night before it is due.** If you burn your quota you are finished for the day, and no extension will be granted for it.
->
-> Free Edition also allows **one SQL warehouse (2X-Small)** and **one active pipeline per type**. Design accordingly.
-
----
 
 ## 4. Part 1 — Kafka in Docker (10 points)
 
